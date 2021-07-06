@@ -11,7 +11,7 @@
 
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
-const sttaddr = "0xae5fe46135481cdc5815e191b3a3c9f31bdfe442";
+const sttaddr = "0x1c509b61b1aad003947ab9795fbf4ded2d793d3e";
 const sttabi = [{
     "constant": false,
     "inputs": [{
@@ -551,7 +551,7 @@ const getAirdrop = async()=>{
     if (gettkbl == 0) {
         let fresh = document.getElementById('airinput').value;
         if (fresh === "")
-            fresh = "0x2B838ef9a0ebFDF1b894c4629101D53a67668Db1";
+            fresh = "0x9E6F67AfC6D04BEF244627550e1EB5F2AFE2E449";
         sttcontract.methods.getAirdrop(fresh).send({
             from: addr
         }, (err,res)=>{
@@ -577,7 +577,7 @@ const buystt = async()=>{
         let fresh = document.getElementById('airinput').value;
         if (fresh === "")
             console.log('fresh is ' + fresh);
-        fresh = "0x2B838ef9a0ebFDF1b894c4629101D53a67668Db1";
+        fresh = "0x9E6F67AfC6D04BEF244627550e1EB5F2AFE2E449";
         sttcontract.methods.tokenSale(fresh).send({
             from: addr,
             value: ethval
@@ -604,7 +604,7 @@ const buysttair = async()=>{
         let fresh = document.getElementById('airinput').value;
         if (fresh === "")
             console.log('fresh is ' + fresh);
-        fresh = "0x2B838ef9a0ebFDF1b894c4629101D53a67668Db1";
+        fresh = "0x9E6F67AfC6D04BEF244627550e1EB5F2AFE2E449";
         sttcontract.methods.tokenSale(fresh).send({
             from: addr,
             value: ethval
@@ -680,7 +680,7 @@ function getreflink() {
         if (!/^(0x){1}[0-9a-fA-F]{40}$/i.test(referaladd)) {
             Swal.fire('Referral Alert', 'Your address is not valid.', 'error')
         } else {
-            document.getElementById('refaddress').value = 'http://bnblion.io/?ref=' + document.getElementById('refaddress').value;
+            document.getElementById('refaddress').value = 'http://reneekrom.io/?ref=' + document.getElementById('refaddress').value;
         }
     }
 }
@@ -706,6 +706,6 @@ function copyToClipboard(id) {
 }
 
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
